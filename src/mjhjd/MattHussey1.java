@@ -28,13 +28,16 @@ public class MattHussey1 extends Robot
 			// Base turn - 10 - 0.75 * abs(velocity)
 			//turnRight(10);
 			// Gun turn 20
-			turnGunRight(20);
+			
+			ahead(100.0);
+			turnRight(10);
 		}
 	}
 
 	/**
 	 * onScannedRobot: What to do when you see another robot
 	 */
+	@Override
 	public void onScannedRobot(ScannedRobotEvent e) {
 		fire(2.0);
 	}
@@ -42,12 +45,14 @@ public class MattHussey1 extends Robot
 	/**
 	 * onHitByBullet: What to do when you're hit by a bullet
 	 */
+	@Override
 	public void onHitByBullet(HitByBulletEvent e) {
 	}
 	
 	/**
 	 * onHitWall: What to do when you hit a wall
 	 */
+	@Override
 	public void onHitWall(HitWallEvent e) {
 	}	
 }
